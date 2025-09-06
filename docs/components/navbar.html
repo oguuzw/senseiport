@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="nav-links">
+            <li><a href="../index.html">Anasayfa</a></li>
+            <li><a href="../pages/plakalik.html">Plakalık</a></li>
+            <li><a href="../pages/dekor-plaka.html">Dekor Plaka</a></li>
+            <li><a href="../pages/anahtarlik.html">Anahtarlık</a></li>
+            <li><a href="../pages/ayna-susu.html">Ayna Süsü</a></li>
+            <li><a href="../pages/dekor-tabela.html">Dekor Tabela</a></li>
+        </ul>
+    </nav>
+    <script>
+    // Aktif sayfa linkini sarı yapmak için
+    document.addEventListener('DOMContentLoaded', function() {
+        var navLinks = document.querySelectorAll('#nav-links a');
+        var currentPath = window.location.pathname.replace(/\\/g, '/').toLowerCase();
+        
+        navLinks.forEach(function(link) {
+            var linkHref = link.getAttribute('href').toLowerCase();
+            // ../pages/plakalik.html gibi relative path'i absolute path'e çeviriyoruz
+            var absoluteLinkPath = new URL(linkHref, window.location.href).pathname.replace(/\\/g, '/');
+            
+            if (currentPath === absoluteLinkPath || 
+                (currentPath.endsWith('/index.html') && linkHref.endsWith('/index.html'))) {
+                link.classList.add('active');
+            }
+        });
+    });
+    </script>
+</body>
+</html>

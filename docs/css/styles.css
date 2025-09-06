@@ -1,0 +1,549 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #222 0%, #444 100%);
+}
+
+#header {
+    background-color: #222;
+    color: white;
+    padding: 4px 0;         /* Daha az boşluk */
+    text-align: center;
+    height: auto;
+    min-height: 5vh;      /* Minimum yükseklik daha da azaltıldı */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;       /* Taşmayı önle */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;    /* Dikeyde ortala */
+    justify-content: center;/* Ortala */
+    width: 100%;
+    gap: 20px;              /* Daha az boşluk */
+    margin: 0 auto;
+    flex-wrap: wrap;        /* Taşmayı önle */
+}
+
+.logo {
+    align-self: flex-start;       /* Logo üstte hizalansın */
+    margin-right: 10px;
+    max-width: 80px;
+    margin-left: -15px;           /* Logo biraz daha sola gelsin */
+    margin-top: -10px;            /* Logo biraz daha yukarıda olsun */
+}
+
+#navbar {
+    background: linear-gradient(90deg, #111 0%, #333 60%, #444 100%);
+    padding: 16px 0 14px 0;
+    text-align: center;
+    position: sticky; /* sayfada kaydırıldığında üstte sabit kalır */
+    top: 0;
+    z-index: 1000; /* içeriklerin üzerinde kalması için yüksek z-index */
+    border-bottom: 3px solid #ffcc00;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+#nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.15em;
+    padding: 6px 18px;
+    border-radius: 6px;
+    background: rgba(34,34,34,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid transparent;
+    transition: color 0.2s, transform 0.2s, background 0.2s, border 0.2s, box-shadow 0.2s;
+}
+
+#nav-links a.active {
+    color: #ffcc00;
+    border-bottom: none;
+    background: none;
+    font-weight: bold;
+    box-shadow: none;
+    text-shadow: none;
+    z-index: 2;
+}
+
+#nav-links a:hover {
+    text-decoration: none;
+    color: #222;
+    background: #ffcc00;
+    border: 1px solid #ffcc00;
+    transform: scale(1.15); /* Yaklaşma efekti */
+    z-index: 2;
+    box-shadow: 0 0 12px 2px rgba(255,255,255,0.25), 0 0 2px 1px #fff;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    background: linear-gradient(135deg, #222 0%, #444 100%);
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: auto;
+}
+
+.slideshow-container .label {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+}
+
+.slogan {
+    font-family: 'Brush Script MT', cursive;
+    font-size: clamp(1em, 1.8vw, 1.5em);
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+    color: #ffcc00; /* Altın sarısı */
+    font-weight: 600;
+    text-shadow: 1px 1px 6px #222;
+}
+
+.brand {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: clamp(1.5em, 3vw, 2.5em);
+    letter-spacing: 7px;
+    margin-top: 0;
+    color: #ffffff; /* Beyaz */
+    font-weight: 700;
+    text-shadow: 0 0 6px #222; /* Sadece siyah gölge */
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 100;
+    transition: box-shadow 0.2s;
+}
+
+.menu-btn:hover {
+    box-shadow: 0 0 12px 2px rgba(255,255,255,0.25), 0 0 2px 1px #fff;
+}
+
+.slideshow-wrapper {
+    width: 90vw;
+    max-width: 1400px;
+    margin: 48px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 44vh;
+    background: rgba(30, 30, 40, 0.55);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25), 0 1.5px 8px 0 rgba(255,255,255,0.08) inset;
+    backdrop-filter: blur(8px) saturate(120%);
+    border: 1.5px solid rgba(255,255,255,0.13);
+    padding: 32px 0;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s, background 0.3s;
+}
+
+.slideshow-img {
+    width: 100%;
+    max-width: 1280px;
+    aspect-ratio: 16/7;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18), 0 1.5px 8px 0 rgba(255,255,255,0.08) inset;
+    display: block;
+    border: 1.5px solid rgba(255,255,255,0.13);
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+/* Modern slideshow navigation arrows */
+.slideshow-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    transition: background 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+}
+.slideshow-arrow:hover {
+    background: rgba(255,255,255,0.18);
+    color: #ffcc00;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+    opacity: 1;
+}
+.slideshow-arrow.left {
+    left: 18px;
+}
+.slideshow-arrow.right {
+    right: 18px;
+}
+
+/* Modern slideshow dots */
+.slideshow-dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 12;
+}
+.slideshow-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    border: 1.5px solid #ffcc00;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+}
+.slideshow-dot.active {
+    background: #ffcc00;
+    border: 1.5px solid #fff;
+}
+
+/* Products section */
+.products-section {
+    width: 90vw;
+    max-width: 1400px;
+    margin: 32px auto 72px auto;
+    color: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background: rgba(20,20,28,0.5);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.32);
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 4/3; /* Korunan oran */
+    overflow: hidden;
+    border-radius: 8px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Görüntü oranını korur ve kırpar */
+    display: block;
+}
+
+.product-name {
+    margin: 10px 0 6px 0;
+    font-size: 1.05rem;
+    color: #ffefc2;
+}
+.product-price {
+    margin: 0;
+    font-weight: 700;
+    color: #ffcc00;
+}
+
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .products-section {
+        width: 94vw;
+        margin: 20px auto 48px auto;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .product-name { font-size: 1rem; }
+}
+
+@media (max-width: 600px) {
+    #header {
+        height: 10vh;
+        padding: 4px 0;
+        position: relative; /* Menü butonu için konumlandırma */
+        min-height: 0;
+    }
+
+    .menu-btn {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 101;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 4px;
+        margin: 0;
+    }
+
+    .logo {
+        max-width: 40px;
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    .slogan {
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        margin-bottom: 2px;
+        color: #ffcc00;
+    }
+
+    .brand {
+        font-size: 0.9em;
+        letter-spacing: 2px;
+        margin-top: 0;
+        color: #fff;
+    }
+
+    #navbar {
+        text-align: left;
+        padding: 0;
+        background: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        z-index: 100;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 60vw;
+        box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+        border-radius: 0 0 0 10px;
+        z-index: 99;
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+
+    #nav-links a {
+        margin: 10px 10px;
+        font-size: 1em;
+    }
+
+    .slideshow-img {
+        aspect-ratio: 9/16;   /* Mobil için dikey oran */
+        max-width: 100vw;
+    }
+}
+
+@media (max-width: 900px) {
+    #header {
+        padding: 4px 0;
+        min-height: 0;
+        height: auto;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+    }
+
+    .logo {
+        max-width: 30px;
+        margin: 0;
+    }
+
+    .slogan {
+        font-size: 0.7em;
+        letter-spacing: 1px;
+        margin-bottom: 2px;
+        color: #ffcc00;
+    }
+
+    .brand {
+        font-size: 0.7em;
+        letter-spacing: 1.5px;
+        margin-top: 0;
+        color: #fff;
+    }
+}
+
+/* Sadece geniş ekranlar için logo konumu */
+@media (min-width: 900px) {
+    .logo {
+        margin-left: -40px;   /* Daha sola */
+        margin-top: 0px;     /* Daha aşağıya */
+        max-width: 80px;
+        margin-right: 10px;
+        align-self: flex-start;
+    }
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 56px;
+    height: 56px;
+    background: transparent; /* Şeffaf arka plan */
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    z-index: 2000;
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.whatsapp-float:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
+.whatsapp-float svg { display: block; }
+.whatsapp-float .whatsapp-icon,
+.whatsapp-float img.whatsapp-icon { width: 60%; height: 60%; object-fit: contain; display: block; }
+
+@media (max-width: 600px) {
+    .whatsapp-float { right: 12px; bottom: 12px; width: 50px; height: 50px; }
+}
+
+/* Tooltip for whatsapp float */
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    bottom: 8px;
+    background: rgba(0,0,0,0.85); /* Daha koyu, daha belirgin */
+    color: #fff;
+    padding: 10px 14px; /* Daha büyük padding */
+    border-radius: 10px;
+    font-size: 1.05rem; /* Yazı büyütüldü */
+    font-weight: 700; /* Daha belirgin */
+    line-height: 1.2;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(6px);
+    pointer-events: none;
+    transition: opacity 0.12s ease, transform 0.12s ease;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.32);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.45);
+}
+.whatsapp-float:hover .whatsapp-tooltip,
+.whatsapp-float:focus .whatsapp-tooltip,
+.whatsapp-float.show-tooltip .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+@media (max-width: 600px) {
+    .whatsapp-tooltip { right: 64px; bottom: 6px; font-size: 0.85rem; }
+}
+
+/* Footer styles */
+.site-footer {
+    background: linear-gradient(180deg, #111 0%, #1b1b1b 100%);
+    color: #ddd;
+    padding: 28px 0 18px 0;
+    border-top: 1px solid rgba(255,255,255,0.04);
+}
+.footer-inner {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
+}
+.site-footer .icon {
+    color: #ffcc00;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.site-footer .address {
+    color: #ffefc2;
+}
+.footer-bottom {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 700px) {
+    .footer-inner { gap: 12px; justify-content: center; }
+    .footer-item { min-width: 0; }
+}
