@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensei Port</title>
+    <title>Senseiport | Anasayfa</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -27,78 +27,68 @@
     </div>
     <div class="slideshow-wrapper">
         <button class="slideshow-arrow left" id="slide-prev" aria-label="Önceki">&#10094;</button>
-        <div id="slideshow">
+        <div id="slideshow" style="position: relative;">
             <img id="slide-img" src="images/slide1.jpg" alt="Slideshow" class="slideshow-img">
+            <div id="slide-dots" style="position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 12;"></div>
         </div>
         <button class="slideshow-arrow right" id="slide-next" aria-label="Sonraki">&#10095;</button>
     </div>
     
-    <!-- Ürün tanıtım bölümü: 4 kart -->
+    <!-- Ürün tanıtım bölümü -->
     <section class="products-section">
-        <div class="product-grid">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 2em; color: #ffcc00;">Ürünlerimiz</h2>
+        <!-- Üst satır: 4 ürün -->
+        <div class="product-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 32px;">
             <article class="product-card">
                 <div class="product-image">
                     <img src="images/slide2.jpg" alt="Plakalık Model A">
                 </div>
                 <h3 class="product-name">Plakalık Model A</h3>
-                <p class="product-price">₺149,90</p>
             </article>
-
             <article class="product-card">
                 <div class="product-image">
                     <img src="images/slide3.jpg" alt="Dekor Plaka B">
                 </div>
                 <h3 class="product-name">Dekor Plaka B</h3>
-                <p class="product-price">₺199,90</p>
             </article>
-
             <article class="product-card">
                 <div class="product-image">
                     <img src="images/slide4.jpg" alt="Anahtarlık C">
                 </div>
                 <h3 class="product-name">Anahtarlık C</h3>
-                <p class="product-price">₺49,90</p>
             </article>
-
             <article class="product-card">
                 <div class="product-image">
                     <img src="images/slide5.jpg" alt="Ayna Süsü D">
                 </div>
                 <h3 class="product-name">Ayna Süsü D</h3>
-                <p class="product-price">₺89,90</p>
             </article>
-            
-            <!-- İkinci sıra: 4 ürün daha -->
+        </div>
+        <!-- Alt satır: 4 ürün -->
+        <div class="product-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
             <article class="product-card">
                 <div class="product-image">
                     <img src="images/slide1.jpg" alt="Plakalık Model E">
                 </div>
                 <h3 class="product-name">Plakalık Model E</h3>
-                <p class="product-price">₺129,90</p>
             </article>
-
             <article class="product-card">
                 <div class="product-image">
                     <img src="images/slide2.jpg" alt="Dekor Plaka F">
                 </div>
                 <h3 class="product-name">Dekor Plaka F</h3>
-                <p class="product-price">₺179,90</p>
             </article>
-
             <article class="product-card">
                 <div class="product-image">
                     <img src="images/slide3.jpg" alt="Anahtarlık G">
                 </div>
                 <h3 class="product-name">Anahtarlık G</h3>
-                <p class="product-price">₺59,90</p>
             </article>
-
             <article class="product-card">
                 <div class="product-image">
                     <img src="images/slide4.jpg" alt="Ayna Süsü H">
                 </div>
                 <h3 class="product-name">Ayna Süsü H</h3>
-                <p class="product-price">₺99,90</p>
             </article>
         </div>
     </section>

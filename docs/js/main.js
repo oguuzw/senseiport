@@ -3,26 +3,61 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Slideshow
     const slides = [
-        'images/slide1.jpg',
-        'images/slide2.jpg',
-        'images/slide3.jpg',
-        'images/slide4.jpg',
-        'images/slide5.jpg'
-        // Kendi fotoğraf isimlerinizi ekleyin
+        { src: 'images/slide1.jpg', label: 'Plakalık' },
+        { src: 'images/slide2.jpg', label: 'Dekor Plaka' },
+        { src: 'images/slide3.jpg', label: 'Anahtarlık' },
+        { src: 'images/slide4.jpg', label: 'Ayna Süsü' },
+        { src: 'images/slide5.jpg', label: 'Dekor Tabela' }
     ];
 
     let currentSlide = 0;
     const slideImg = document.getElementById('slide-img');
+    const slideDots = document.getElementById('slide-dots');
     const prevBtn = document.getElementById('slide-prev');
     const nextBtn = document.getElementById('slide-next');
     let slideInterval;
+
+    // Dot navigation rendering
+    function renderDots() {
+        if (!slideDots) return;
+        slideDots.innerHTML = '';
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'slideshow-dot' + (i === currentSlide ? ' active' : '');
+            dot.style.width = '12px';
+            dot.style.height = '12px';
+            dot.style.borderRadius = '50%';
+            dot.style.background = i === currentSlide ? '#ffcc00' : 'rgba(255,255,255,0.25)';
+            dot.style.border = '1.5px solid #ffcc00';
+            dot.style.display = 'inline-block';
+            dot.style.cursor = 'pointer';
+            dot.addEventListener('click', function() {
+                stopSlideshow();
+                showSlide(i);
+                startSlideshow();
+            });
+            slideDots.appendChild(dot);
+        }
+    }
 
     function showSlide(index) {
         if (index < 0) index = slides.length - 1;
         if (index >= slides.length) index = 0;
         currentSlide = index;
-        slideImg.src = slides[currentSlide];
+
+        // Fade out effect
+        slideImg.style.opacity = '0';
+
+        renderDots();
+
+        setTimeout(() => {
+            slideImg.src = slides[currentSlide].src;
+            slideImg.style.opacity = '1';
+        }, 400);
     }
+
+    // Initial render of dots
+    renderDots();
 
     function nextSlide() {
         showSlide(currentSlide + 1);
