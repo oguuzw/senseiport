@@ -5,53 +5,63 @@ body {
     background: linear-gradient(135deg, #222 0%, #444 100%);
 }
 
-#header {
-    background-color: #222;
-    color: white;
-    padding: 4px 0;         /* Daha az boşluk */
-    text-align: center;
-    height: auto;
-    min-height: 5vh;      /* Minimum yükseklik daha da azaltıldı */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    overflow: hidden;       /* Taşmayı önle */
-}
-
-.header-content {
-    display: flex;
-    align-items: center;    /* Dikeyde ortala */
-    justify-content: center;/* Ortala */
-    width: 100%;
-    gap: 20px;              /* Daha az boşluk */
-    margin: 0 auto;
-    flex-wrap: wrap;        /* Taşmayı önle */
-}
-
-.logo {
-    align-self: flex-start;       /* Logo üstte hizalansın */
-    margin-right: 10px;
-    max-width: 80px;
-    margin-left: -15px;           /* Logo biraz daha sola gelsin */
-    margin-top: -10px;            /* Logo biraz daha yukarıda olsun */
-}
-
-#navbar {
+.main-header {
     background: linear-gradient(90deg, #111 0%, #333 60%, #444 100%);
-    padding: 16px 0 14px 0;
-    text-align: center;
-    position: sticky; /* sayfada kaydırıldığında üstte sabit kalır */
+    padding: 25px 90px;
+    position: sticky;
     top: 0;
-    z-index: 1000; /* içeriklerin üzerinde kalması için yüksek z-index */
+    z-index: 1000;
+    min-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 3px solid #ffcc00;
     box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -4px;
+}
+
+.brand-container {
+    gap: 12px;
+    display: flex;
+    justify-content: flex-start; /* sola */
+    align-items: center;
+    position: relative; /* absolute değil */
+    width: auto;
+}
+
+.logo {
+    max-width: 45px;
+    height: 45px;
+    width: auto;
+    margin: 0;
+    margin-right: 15px; /* Logo ile marka ismi arasında boşluk */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.logo img {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
 #nav-links {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 30px;
 }
@@ -59,22 +69,12 @@ body {
 #nav-links a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     font-weight: bold;
-    font-size: 1.15em;
-    padding: 6px 18px;
+    font-size: 0.95em;
+    padding: 4px 14px;
     border-radius: 6px;
     background: rgba(34,34,34,0.12);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    border: 1px solid transparent;
-    transition: color 0.2s, transform 0.2s, background 0.2s, border 0.2s, box-shadow 0.2s;
-}
-
-#nav-links a.active {
-    color: #ffcc00;
-    border-bottom: none;
-    background: none;
-    font-weight: bold;
     box-shadow: none;
     text-shadow: none;
     z-index: 2;
@@ -111,28 +111,18 @@ body {
     padding: 8px;
 }
 
-.slogan {
-    font-family: 'Brush Script MT', cursive;
-    font-size: clamp(1em, 1.8vw, 1.5em);
-    letter-spacing: 3px;
-    margin-bottom: 4px;
-    color: #ffcc00; /* Altın sarısı */
-    font-weight: 600;
-    text-shadow: 1px 1px 6px #222;
-}
-
 .brand {
     font-family: 'Oswald', Arial, sans-serif;
-    font-size: clamp(1.5em, 3vw, 2.5em);
-    letter-spacing: 9px; /* yatay genişlik için biraz daha aralık */
+    font-size: clamp(1.2em, 2.2vw, 1.8em);
+    letter-spacing: 6px;
     margin-top: 0;
-    color: #ffffff; /* Beyaz */
+    color: #ffffff;
     font-weight: 700;
-    text-shadow: 0 0 6px #222; /* Sadece siyah gölge */
-    display: inline-block; /* transform uygulamak için blok düzeyi */
+    text-shadow: 0 0 6px #222;
+    display: inline-block;
     transform-origin: center;
     -webkit-transform-origin: center;
-    transform: scaleX(1.18); /* yatayda genişlet */
+    transform: scaleX(1.18);
     -webkit-transform: scaleX(1.18);
 }
 
@@ -260,7 +250,6 @@ body {
     transition: transform 0.18s, box-shadow 0.18s;
 }
 .product-card:hover {
-    /* keep horizontal scale from base rule and also pull up slightly */
     transform: scaleX(1.18) translateY(-6px);
     -webkit-transform: scaleX(1.18) translateY(-6px);
     box-shadow: 0 12px 32px rgba(0,0,0,0.32);
@@ -268,7 +257,7 @@ body {
 
 .product-image {
     width: 100%;
-    aspect-ratio: 4/3; /* Korunan oran */
+    aspect-ratio: 4/3;
     overflow: hidden;
     border-radius: 8px;
     background: #111;
@@ -279,7 +268,7 @@ body {
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Görüntü oranını korur ve kırpar */
+    object-fit: cover;
     display: block;
 }
 
@@ -312,8 +301,8 @@ body {
 }
 
 @media (max-width: 600px) {
-    #header {
-        height: 12vh;
+    .main-header {
+        height: 7vh;
         padding: 8px 0;
         position: relative;
         min-height: 0;
@@ -325,7 +314,7 @@ body {
         justify-content: center;
         position: fixed;
         right: 20px;
-        top: 15px;
+        top: 25px;
         width: 40px;
         height: 40px;
         background: rgba(0, 0, 0, 0.5);
@@ -345,20 +334,29 @@ body {
         transform: scale(1.1);
     }
 
-    .header-content {
-        flex-direction: column;
+    .header-left {
         align-items: center;
+        flex: 1;
+        position: relative;
+        margin-left: 0;
+    }
+
+    .brand-container {
+        gap: 12px;
         width: 100%;
-        gap: 6px;
-        margin: 0;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%);
     }
 
     .logo {
-        max-width: 65px;
-        margin-left: 20px;
-        margin-top: 0;
-        margin-right: 0;
-        transform: translateX(8px);
+        max-width: 50px;
+        margin-top: -24px;
+        height: 40px;
+        width: auto;
+        margin-right: 15px;
     }
 
     .slogan {
@@ -369,15 +367,16 @@ body {
     }
 
     .brand {
-    /* Increased on mobile for better readability and pulled up */
-    font-size: 1.8em;
-    letter-spacing: 3px;
-    margin-top: -16px; /* pulled up more */
-    transform: translateY(-8px);
-    line-height: 1.1;
-    color: #fff;
-    display: block;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        font-size: 1.8em;
+        letter-spacing: 3px;
+        margin: 0;
+        line-height: 1.1;
+        color: #fff;
+        display: block;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        text-align: center;
+        padding: 0;
+        white-space: nowrap;
     }
 
     #navbar {
@@ -428,7 +427,7 @@ body {
     }
 
     .slideshow-img {
-        aspect-ratio: 9/16;   /* Mobil için dikey oran */
+        aspect-ratio: 9/16;
         max-width: 100vw;
     }
 }
@@ -469,17 +468,6 @@ body {
     }
 }
 
-/* Sadece geniş ekranlar için logo konumu */
-@media (min-width: 900px) {
-    .logo {
-        margin-left: -40px;   /* Daha sola */
-        margin-top: 0px;     /* Daha aşağıya */
-        max-width: 80px;
-        margin-right: 10px;
-        align-self: flex-start;
-    }
-}
-
 /* Floating WhatsApp button */
 .whatsapp-float {
     position: fixed;
@@ -487,7 +475,7 @@ body {
     bottom: 18px;
     width: 56px;
     height: 56px;
-    background: transparent; /* Şeffaf arka plan */
+    background: transparent;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -506,17 +494,16 @@ body {
     .whatsapp-float { right: 12px; bottom: 12px; width: 50px; height: 50px; }
 }
 
-/* Tooltip for whatsapp float */
 .whatsapp-tooltip {
     position: absolute;
     right: 70px;
     bottom: 8px;
-    background: rgba(0,0,0,0.85); /* Daha koyu, daha belirgin */
+    background: rgba(0,0,0,0.85);
     color: #fff;
-    padding: 10px 14px; /* Daha büyük padding */
+    padding: 10px 14px;
     border-radius: 10px;
-    font-size: 1.05rem; /* Yazı büyütüldü */
-    font-weight: 700; /* Daha belirgin */
+    font-size: 1.05rem;
+    font-weight: 700;
     line-height: 1.2;
     white-space: nowrap;
     opacity: 0;
