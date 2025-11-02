@@ -1,4 +1,4 @@
-# 🎮 SenseiPort / SenseiPort
+# SenseiPort / SenseiPort
 
 Özel tasarım ürünler için modern ve kullanıcı dostu e-ticaret platformu.  
 A modern and user-friendly e-commerce platform for custom design products.
@@ -98,12 +98,7 @@ Visit the live website: [senseiport.com](https://senseiport.com)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/oguuzw/senseiport)
 ![GitHub Repo Size](https://img.shields.io/github/repo-size/oguuzw/senseiport)
 ![GitHub Languages](https://img.shields.io/github/languages/top/oguuzw/senseiport)
-![GitHub License](https://img.shields.io/github/license/oguuzw/senseiport)
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=oguuzw.senseiport)
-
-### 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ### 👨‍💻 Developer
 
@@ -197,12 +192,7 @@ Canlı web sitesini ziyaret edin: [senseiport.com](https://senseiport.com)
 ![GitHub Son Commit](https://img.shields.io/github/last-commit/oguuzw/senseiport)
 ![GitHub Depo Boyutu](https://img.shields.io/github/repo-size/oguuzw/senseiport)
 ![GitHub Dilleri](https://img.shields.io/github/languages/top/oguuzw/senseiport)
-![GitHub Lisansı](https://img.shields.io/github/license/oguuzw/senseiport)
 ![Ziyaretçiler](https://visitor-badge.laobi.icu/badge?page_id=oguuzw.senseiport)
-
-### 📄 Lisans
-
-Bu proje MIT Lisansı altında lisanslanmıştır - detaylar için LICENSE dosyasına bakın.
 
 ### 👨‍💻 Geliştirici
 
