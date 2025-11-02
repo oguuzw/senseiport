@@ -1,7 +1,19 @@
-# SenseiPort / SenseiPort
-
-Özel tasarım ürünler için modern ve kullanıcı dostu e-ticaret platformu.  
-A modern and user-friendly e-commerce platform for custom design products.
+<div align="center">
+  <img src="docs/images/logo4.png" alt="SenseiPort Logo" width="200"/>
+  
+  # SenseiPort / SenseiPort
+  
+  <p>
+    <strong>Özel tasarım ürünler için modern ve kullanıcı dostu e-ticaret platformu.</strong><br>
+    <strong>A modern and user-friendly e-commerce platform for custom design products.</strong>
+  </p>
+  
+  <p>
+    <a href="https://senseiport.com"><img src="https://img.shields.io/badge/Website-senseiport.com-blue?style=for-the-badge" alt="Website"></a>
+    <a href="https://instagram.com/senseiport"><img src="https://img.shields.io/badge/Instagram-@senseiport-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+    <a href="https://wa.me/+905516436939"><img src="https://img.shields.io/badge/WhatsApp-Contact-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"></a>
+  </p>
+</div>
 
 ---
 
