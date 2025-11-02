@@ -9,7 +9,7 @@
   </p>
   
   <p>
-    <a href="https://senseiport.com"><img src="https://img.shields.io/badge/Website-senseiport.com-blue?style=for-the-badge" alt="Website"></a>
+    <a href="https://senseiport.com.tr"><img src="https://img.shields.io/badge/Website-senseiport.com.tr-blue?style=for-the-badge" alt="Website"></a>
     <a href="https://instagram.com/senseiport"><img src="https://img.shields.io/badge/Instagram-@senseiport-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
     <a href="https://wa.me/+905516436939"><img src="https://img.shields.io/badge/WhatsApp-Contact-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"></a>
   </p>
@@ -33,19 +33,51 @@ SenseiPort is a professional e-commerce website specializing in custom-designed 
 
 ### ✨ Features
 
-- **Responsive Design**: Mobile-first approach with seamless experience across all devices
-- **Interactive Slideshow**: Dynamic product showcase on the homepage
-- **Product Categories**: 
-  - License Plate Frames (Plakalık)
-  - Decorative Plates (Dekor Plaka)
-  - Keychains (Anahtarlık)
-  - Mirror Ornaments (Ayna Süsü)
-  - Decorative Signs (Dekor Tabela)
-- **Contact Integration**: Direct WhatsApp integration and Instagram connection
-- **Modern UI/UX**: Clean, professional interface with smooth animations
-- **Component-Based Architecture**: Modular design with reusable components
+<table>
+<tr>
+<td width="50%">
+
+#### 📱 Responsive Design
+Mobile-first approach with seamless experience across all devices
+
+#### 🎬 Interactive Slideshow
+Dynamic product showcase on the homepage
+
+#### 🛍️ Product Categories
+- License Plate Frames (Plakalık)
+- Decorative Plates (Dekor Plaka)
+- Keychains (Anahtarlık)
+- Mirror Ornaments (Ayna Süsü)
+- Decorative Signs (Dekor Tabela)
+
+</td>
+<td width="50%">
+
+#### 📞 Contact Integration
+Direct WhatsApp integration and Instagram connection
+
+#### 🎨 Modern UI/UX
+Clean, professional interface with smooth animations
+
+#### 🧩 Component-Based Architecture
+Modular design with reusable components
+
+</td>
+</tr>
+</table>
 
 ### 🛠️ Technologies Used
+
+<div align="center">
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
+
+</div>
+
+<br>
 
 - **HTML5**: Semantic markup structure
 - **CSS3**: Modern styling with responsive grid layouts
@@ -93,7 +125,13 @@ cd senseiport
 
 ### 🌐 Live Demo
 
-Visit the live website: [senseiport.com](https://senseiport.com)
+<div align="center">
+  <a href="https://senseiport.com.tr" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_Visit_Website-senseiport.com.tr-0066CC?style=for-the-badge&logoColor=white" alt="Visit Website" height="50">
+  </a>
+  <br><br>
+  <strong>👉 Check out the live website now!</strong>
+</div>
 
 ### 📞 Contact
 
@@ -114,7 +152,17 @@ Visit the live website: [senseiport.com](https://senseiport.com)
 
 ### 👨‍💻 Developer
 
-Developed with ❤️ by [oguuzw](https://github.com/oguuzw)
+<div align="center">
+  <img src="https://github.com/oguuzw.png" width="100" style="border-radius: 50%;" alt="oguuzw"/>
+  <br>
+  <strong>Oğuz</strong>
+  <br>
+  <a href="https://github.com/oguuzw">
+    <img src="https://img.shields.io/badge/GitHub-oguuzw-181717?style=flat-square&logo=github" alt="GitHub">
+  </a>
+  <br>
+  <em>Developed with ❤️</em>
+</div>
 
 ---
 
@@ -127,19 +175,51 @@ SenseiPort, özel tasarım otomotiv aksesuarları ve dekoratif ürünler konusun
 
 ### ✨ Özellikler
 
-- **Duyarlı Tasarım**: Tüm cihazlarda kusursuz deneyim sunan mobil-öncelikli yaklaşım
-- **Etkileşimli Slayt Gösterisi**: Ana sayfada dinamik ürün vitrini
-- **Ürün Kategorileri**: 
-  - Plakalık
-  - Dekor Plaka
-  - Anahtarlık
-  - Ayna Süsü
-  - Dekor Tabela
-- **İletişim Entegrasyonu**: Doğrudan WhatsApp entegrasyonu ve Instagram bağlantısı
-- **Modern UI/UX**: Akıcı animasyonlarla temiz ve profesyonel arayüz
-- **Bileşen Tabanlı Mimari**: Yeniden kullanılabilir bileşenlerle modüler tasarım
+<table>
+<tr>
+<td width="50%">
+
+#### 📱 Duyarlı Tasarım
+Tüm cihazlarda kusursuz deneyim sunan mobil-öncelikli yaklaşım
+
+#### 🎬 Etkileşimli Slayt Gösterisi
+Ana sayfada dinamik ürün vitrini
+
+#### 🛍️ Ürün Kategorileri
+- Plakalık
+- Dekor Plaka
+- Anahtarlık
+- Ayna Süsü
+- Dekor Tabela
+
+</td>
+<td width="50%">
+
+#### 📞 İletişim Entegrasyonu
+Doğrudan WhatsApp entegrasyonu ve Instagram bağlantısı
+
+#### 🎨 Modern UI/UX
+Akıcı animasyonlarla temiz ve profesyonel arayüz
+
+#### 🧩 Bileşen Tabanlı Mimari
+Yeniden kullanılabilir bileşenlerle modüler tasarım
+
+</td>
+</tr>
+</table>
 
 ### 🛠️ Kullanılan Teknolojiler
+
+<div align="center">
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
+
+</div>
+
+<br>
 
 - **HTML5**: Semantik işaretleme yapısı
 - **CSS3**: Duyarlı grid düzenleriyle modern stil
@@ -187,7 +267,13 @@ cd senseiport
 
 ### 🌐 Canlı Demo
 
-Canlı web sitesini ziyaret edin: [senseiport.com](https://senseiport.com)
+<div align="center">
+  <a href="https://senseiport.com.tr" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_Siteyi_Ziyaret_Et-senseiport.com.tr-0066CC?style=for-the-badge&logoColor=white" alt="Siteyi Ziyaret Et" height="50">
+  </a>
+  <br><br>
+  <strong>👉 Canlı web sitesini şimdi inceleyin!</strong>
+</div>
 
 ### 📞 İletişim
 
@@ -208,7 +294,17 @@ Canlı web sitesini ziyaret edin: [senseiport.com](https://senseiport.com)
 
 ### 👨‍💻 Geliştirici
 
-❤️ ile geliştirildi - [oguuzw](https://github.com/oguuzw)
+<div align="center">
+  <img src="https://github.com/oguuzw.png" width="100" style="border-radius: 50%;" alt="oguuzw"/>
+  <br>
+  <strong>Oğuz</strong>
+  <br>
+  <a href="https://github.com/oguuzw">
+    <img src="https://img.shields.io/badge/GitHub-oguuzw-181717?style=flat-square&logo=github" alt="GitHub">
+  </a>
+  <br>
+  <em>❤️ ile geliştirildi</em>
+</div>
 
 ---
 
